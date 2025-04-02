@@ -50,8 +50,8 @@ protected function failedValidation(Validator $validator)
 {
      
     throw new HttpResponseException(
-        response()->json(collect($validator->errors())->flatten()->first())
-    );
+        response(collect($validator->errors())->flatten()->first())
+    );  
 }
 
 }
